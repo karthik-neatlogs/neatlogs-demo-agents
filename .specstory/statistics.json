@@ -7,7 +7,61 @@
       "end_timestamp": "2026-06-05T16:28:12+05:30",
       "markdown_size_bytes": 10463,
       "provider": "cursoride",
-      "last_updated": "2026-06-05T11:02:40Z"
+      "last_updated": "2026-06-06T08:34:21Z"
+    },
+    "30b1a55b-7858-4a09-92a5-3655526625d3": {
+      "user_message_count": 1,
+      "agent_message_count": 17,
+      "start_timestamp": "2026-06-06T16:10:34+05:30",
+      "end_timestamp": "2026-06-06T16:10:34+05:30",
+      "markdown_size_bytes": 15873,
+      "provider": "cursoride",
+      "last_updated": "2026-06-06T10:41:09Z"
+    },
+    "4307d45e-1993-4e78-81ce-81cd4e4bbea1": {
+      "user_message_count": 1,
+      "agent_message_count": 8,
+      "start_timestamp": "2026-06-06T15:43:49+05:30",
+      "end_timestamp": "2026-06-06T15:43:49+05:30",
+      "markdown_size_bytes": 11325,
+      "provider": "cursoride",
+      "last_updated": "2026-06-06T10:14:03Z"
+    },
+    "5696686b-e926-422d-82a4-d8305b93a9a0": {
+      "user_message_count": 1,
+      "agent_message_count": 23,
+      "start_timestamp": "2026-06-06T15:35:00+05:30",
+      "end_timestamp": "2026-06-06T15:35:00+05:30",
+      "markdown_size_bytes": 28937,
+      "provider": "cursoride",
+      "last_updated": "2026-06-06T10:05:35Z"
+    },
+    "a2c885ae-8c07-4a26-a422-dabce7673685": {
+      "user_message_count": 1,
+      "agent_message_count": 12,
+      "start_timestamp": "2026-06-06T15:25:03+05:30",
+      "end_timestamp": "2026-06-06T15:25:03+05:30",
+      "markdown_size_bytes": 12847,
+      "provider": "cursoride",
+      "last_updated": "2026-06-06T09:55:35Z"
+    },
+    "eb2303a2-fc39-4cae-b027-12362f15599c": {
+      "user_message_count": 2,
+      "agent_message_count": 26,
+      "start_timestamp": "2026-06-06T14:59:48+05:30",
+      "end_timestamp": "2026-06-06T14:59:48+05:30",
+      "markdown_size_bytes": 32314,
+      "provider": "cursoride",
+      "last_updated": "2026-06-06T09:47:08Z"
+    },
+    "f0b12fcb-2413-41b9-b900-2d4ac6010c97": {
+      "user_message_count": 1,
+      "agent_message_count": 12,
+      "start_timestamp": "2026-06-06T14:22:50+05:30",
+      "end_timestamp": "2026-06-06T14:22:50+05:30",
+      "markdown_size_bytes": 12760,
+      "provider": "cursoride",
+      "last_updated": "2026-06-06T08:53:49Z"
     }
   }
 }
