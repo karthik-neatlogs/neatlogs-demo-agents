@@ -688,3 +688,928 @@
         "schema_url": ""
     }
 }
+{
+    "name": "inventory.lookup",
+    "context": {
+        "trace_id": "0xc3ca190bc03fd90cf765fa7a024c2c81",
+        "span_id": "0x61021b5ac6c21a8d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xdbff97c0634a3db3",
+    "start_time": "2026-06-10T07:17:20.678594Z",
+    "end_time": "2026-06-10T07:17:20.880118Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "TOOL",
+        "neatlogs.span.kind": "tool",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "inventory_lookup",
+        "code.line.number": 35,
+        "code.namespace": "__main__",
+        "tool.name": "inventory.lookup",
+        "input.value": "{\"scenario\": \"ok\"}",
+        "input.mime_type": "application/json",
+        "output.value": "{\"in_stock\": 42}",
+        "output.mime_type": "application/json"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "POST",
+    "context": {
+        "trace_id": "0xc3ca190bc03fd90cf765fa7a024c2c81",
+        "span_id": "0x5550f37b9a168a81",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": "0xdbff97c0634a3db3",
+    "start_time": "2026-06-10T07:17:20.902123Z",
+    "end_time": "2026-06-10T07:17:22.411381Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "http.method": "POST",
+        "http.url": "https://api.openai.com/v1/chat/completions",
+        "http.status_code": 200
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "openai.chat.completions.create",
+    "context": {
+        "trace_id": "0xc3ca190bc03fd90cf765fa7a024c2c81",
+        "span_id": "0x21a3c446078121b2",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xdbff97c0634a3db3",
+    "start_time": "2026-06-10T07:17:20.882286Z",
+    "end_time": "2026-06-10T07:17:22.429809Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "llm",
+        "neatlogs.llm.provider": "openai",
+        "neatlogs.llm.system": "openai",
+        "neatlogs.llm.is_streaming": false,
+        "neatlogs.llm.input_messages.0.role": "system",
+        "neatlogs.llm.input_messages.0.content": "You answer inventory questions for the Lumio store.",
+        "neatlogs.llm.input_messages.1.role": "user",
+        "neatlogs.llm.input_messages.1.content": "How many Lumio Pro lamps are in stock?\n\nInventory data: {'in_stock': 42}",
+        "neatlogs.llm.output_messages.0.role": "assistant",
+        "neatlogs.llm.output_messages.0.content": "There are currently 42 Lumio Pro lamps in stock.",
+        "neatlogs.llm.finish_reason": "stop",
+        "neatlogs.llm.token_count.prompt": 41,
+        "neatlogs.llm.token_count.completion": 12,
+        "neatlogs.llm.token_count.total": 53,
+        "neatlogs.llm.token_count.cache_read": 0,
+        "neatlogs.llm.token_count.reasoning": 0,
+        "neatlogs.llm.model_name": "gpt-4o-mini-2024-07-18",
+        "neatlogs.llm.metrics.duration_ms": 1547.245
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory_agent",
+    "context": {
+        "trace_id": "0xc3ca190bc03fd90cf765fa7a024c2c81",
+        "span_id": "0xdbff97c0634a3db3",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x445a1119fcffe4b0",
+    "start_time": "2026-06-10T07:17:20.678555Z",
+    "end_time": "2026-06-10T07:17:22.431525Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "AGENT",
+        "neatlogs.span.kind": "agent",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "answer",
+        "code.line.number": 50,
+        "code.namespace": "__main__",
+        "agent.name": "Inventory Assistant",
+        "neatlogs.agent.role": "Inventory Assistant",
+        "neatlogs.agent.goal": "Answer stock questions using the inventory service",
+        "input.value": "{\"question\": \"How many Lumio Pro lamps are in stock?\", \"scenario\": \"ok\"}",
+        "input.mime_type": "application/json",
+        "output.value": "\"There are currently 42 Lumio Pro lamps in stock.\"",
+        "output.mime_type": "application/json"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory_request",
+    "context": {
+        "trace_id": "0xc3ca190bc03fd90cf765fa7a024c2c81",
+        "span_id": "0x445a1119fcffe4b0",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T07:17:20.678464Z",
+    "end_time": "2026-06-10T07:17:22.432265Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "WORKFLOW",
+        "neatlogs.span.kind": "workflow",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "handle",
+        "code.line.number": 65,
+        "code.namespace": "__main__",
+        "input.value": "{\"question\": \"How many Lumio Pro lamps are in stock?\", \"scenario\": \"ok\"}",
+        "input.mime_type": "application/json",
+        "output.value": "\"There are currently 42 Lumio Pro lamps in stock.\"",
+        "output.mime_type": "application/json"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory.lookup",
+    "context": {
+        "trace_id": "0x6c2fae699a3e5f228c6cfaed368d8480",
+        "span_id": "0x9d433010b14001d4",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x2448d2b31ff4fd2e",
+    "start_time": "2026-06-10T07:17:22.433622Z",
+    "end_time": "2026-06-10T07:17:22.637893Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "RuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "TOOL",
+        "neatlogs.span.kind": "tool",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "inventory_lookup",
+        "code.line.number": 35,
+        "code.namespace": "__main__",
+        "tool.name": "inventory.lookup",
+        "input.value": "{\"scenario\": \"rate_limit\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.635831Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "rate_limit_error (HTTP 429): quota exceeded - request was throttled",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 40, in inventory_lookup\n    raise RuntimeError(\n        \"rate_limit_error (HTTP 429): quota exceeded - request was throttled\"\n    )\nRuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.637868Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "rate_limit_error (HTTP 429): quota exceeded - request was throttled",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 40, in inventory_lookup\n    raise RuntimeError(\n        \"rate_limit_error (HTTP 429): quota exceeded - request was throttled\"\n    )\nRuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory_agent",
+    "context": {
+        "trace_id": "0x6c2fae699a3e5f228c6cfaed368d8480",
+        "span_id": "0x2448d2b31ff4fd2e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x42ad78bbdcb3864c",
+    "start_time": "2026-06-10T07:17:22.433506Z",
+    "end_time": "2026-06-10T07:17:22.640180Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "RuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "AGENT",
+        "neatlogs.span.kind": "agent",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "answer",
+        "code.line.number": 50,
+        "code.namespace": "__main__",
+        "agent.name": "Inventory Assistant",
+        "neatlogs.agent.role": "Inventory Assistant",
+        "neatlogs.agent.goal": "Answer stock questions using the inventory service",
+        "input.value": "{\"question\": \"Do you have the Sage finish available?\", \"scenario\": \"rate_limit\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.639557Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "rate_limit_error (HTTP 429): quota exceeded - request was throttled",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 40, in inventory_lookup\n    raise RuntimeError(\n        \"rate_limit_error (HTTP 429): quota exceeded - request was throttled\"\n    )\nRuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.640170Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "rate_limit_error (HTTP 429): quota exceeded - request was throttled",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 40, in inventory_lookup\n    raise RuntimeError(\n        \"rate_limit_error (HTTP 429): quota exceeded - request was throttled\"\n    )\nRuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory_request",
+    "context": {
+        "trace_id": "0x6c2fae699a3e5f228c6cfaed368d8480",
+        "span_id": "0x42ad78bbdcb3864c",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T07:17:22.433247Z",
+    "end_time": "2026-06-10T07:17:22.642555Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "RuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "WORKFLOW",
+        "neatlogs.span.kind": "workflow",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "handle",
+        "code.line.number": 65,
+        "code.namespace": "__main__",
+        "input.value": "{\"question\": \"Do you have the Sage finish available?\", \"scenario\": \"rate_limit\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.641777Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "rate_limit_error (HTTP 429): quota exceeded - request was throttled",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 67, in handle\n    return answer(question, scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 40, in inventory_lookup\n    raise RuntimeError(\n        \"rate_limit_error (HTTP 429): quota exceeded - request was throttled\"\n    )\nRuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.642544Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "rate_limit_error (HTTP 429): quota exceeded - request was throttled",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 67, in handle\n    return answer(question, scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 40, in inventory_lookup\n    raise RuntimeError(\n        \"rate_limit_error (HTTP 429): quota exceeded - request was throttled\"\n    )\nRuntimeError: rate_limit_error (HTTP 429): quota exceeded - request was throttled\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory.lookup",
+    "context": {
+        "trace_id": "0x76c02997eda83ea15f5c25c15305bf86",
+        "span_id": "0x8cc6390a9ebe0ff1",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x04883e083cf9159d",
+    "start_time": "2026-06-10T07:17:22.644031Z",
+    "end_time": "2026-06-10T07:17:22.847551Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "RuntimeError: HTTP 500: internal server error from inventory service"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "TOOL",
+        "neatlogs.span.kind": "tool",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "inventory_lookup",
+        "code.line.number": 35,
+        "code.namespace": "__main__",
+        "tool.name": "inventory.lookup",
+        "input.value": "{\"scenario\": \"server_error\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.847167Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "HTTP 500: internal server error from inventory service",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 44, in inventory_lookup\n    raise RuntimeError(\"HTTP 500: internal server error from inventory service\")\nRuntimeError: HTTP 500: internal server error from inventory service\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.847541Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "HTTP 500: internal server error from inventory service",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 44, in inventory_lookup\n    raise RuntimeError(\"HTTP 500: internal server error from inventory service\")\nRuntimeError: HTTP 500: internal server error from inventory service\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory_agent",
+    "context": {
+        "trace_id": "0x76c02997eda83ea15f5c25c15305bf86",
+        "span_id": "0x04883e083cf9159d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xc876298eac8cde8d",
+    "start_time": "2026-06-10T07:17:22.643940Z",
+    "end_time": "2026-06-10T07:17:22.849415Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "RuntimeError: HTTP 500: internal server error from inventory service"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "AGENT",
+        "neatlogs.span.kind": "agent",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "answer",
+        "code.line.number": 50,
+        "code.namespace": "__main__",
+        "agent.name": "Inventory Assistant",
+        "neatlogs.agent.role": "Inventory Assistant",
+        "neatlogs.agent.goal": "Answer stock questions using the inventory service",
+        "input.value": "{\"question\": \"Is the standard Lumio in stock?\", \"scenario\": \"server_error\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.848980Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "HTTP 500: internal server error from inventory service",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 44, in inventory_lookup\n    raise RuntimeError(\"HTTP 500: internal server error from inventory service\")\nRuntimeError: HTTP 500: internal server error from inventory service\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.849407Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "HTTP 500: internal server error from inventory service",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 44, in inventory_lookup\n    raise RuntimeError(\"HTTP 500: internal server error from inventory service\")\nRuntimeError: HTTP 500: internal server error from inventory service\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory_request",
+    "context": {
+        "trace_id": "0x76c02997eda83ea15f5c25c15305bf86",
+        "span_id": "0xc876298eac8cde8d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T07:17:22.643787Z",
+    "end_time": "2026-06-10T07:17:22.850954Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "RuntimeError: HTTP 500: internal server error from inventory service"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "WORKFLOW",
+        "neatlogs.span.kind": "workflow",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "handle",
+        "code.line.number": 65,
+        "code.namespace": "__main__",
+        "input.value": "{\"question\": \"Is the standard Lumio in stock?\", \"scenario\": \"server_error\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.850449Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "HTTP 500: internal server error from inventory service",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 67, in handle\n    return answer(question, scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 44, in inventory_lookup\n    raise RuntimeError(\"HTTP 500: internal server error from inventory service\")\nRuntimeError: HTTP 500: internal server error from inventory service\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:22.850948Z",
+            "attributes": {
+                "exception.type": "RuntimeError",
+                "exception.message": "HTTP 500: internal server error from inventory service",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 67, in handle\n    return answer(question, scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 44, in inventory_lookup\n    raise RuntimeError(\"HTTP 500: internal server error from inventory service\")\nRuntimeError: HTTP 500: internal server error from inventory service\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory.lookup",
+    "context": {
+        "trace_id": "0x048487f069a6f5727e99f1d21deb3ae2",
+        "span_id": "0xc8cc5ea149d01f88",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x9ebb2e9b47bd2404",
+    "start_time": "2026-06-10T07:17:22.851824Z",
+    "end_time": "2026-06-10T07:17:23.054930Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "TimeoutError: inventory service did not respond within 5s"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "TOOL",
+        "neatlogs.span.kind": "tool",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "inventory_lookup",
+        "code.line.number": 35,
+        "code.namespace": "__main__",
+        "tool.name": "inventory.lookup",
+        "input.value": "{\"scenario\": \"timeout\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:23.054477Z",
+            "attributes": {
+                "exception.type": "TimeoutError",
+                "exception.message": "inventory service did not respond within 5s",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 46, in inventory_lookup\n    raise TimeoutError(\"inventory service did not respond within 5s\")\nTimeoutError: inventory service did not respond within 5s\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:23.054917Z",
+            "attributes": {
+                "exception.type": "TimeoutError",
+                "exception.message": "inventory service did not respond within 5s",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 46, in inventory_lookup\n    raise TimeoutError(\"inventory service did not respond within 5s\")\nTimeoutError: inventory service did not respond within 5s\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory_agent",
+    "context": {
+        "trace_id": "0x048487f069a6f5727e99f1d21deb3ae2",
+        "span_id": "0x9ebb2e9b47bd2404",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xc4d65076893eca4d",
+    "start_time": "2026-06-10T07:17:22.851754Z",
+    "end_time": "2026-06-10T07:17:23.057150Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "TimeoutError: inventory service did not respond within 5s"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "AGENT",
+        "neatlogs.span.kind": "agent",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "answer",
+        "code.line.number": 50,
+        "code.namespace": "__main__",
+        "agent.name": "Inventory Assistant",
+        "neatlogs.agent.role": "Inventory Assistant",
+        "neatlogs.agent.goal": "Answer stock questions using the inventory service",
+        "input.value": "{\"question\": \"Can I order 10 units today?\", \"scenario\": \"timeout\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:23.056699Z",
+            "attributes": {
+                "exception.type": "TimeoutError",
+                "exception.message": "inventory service did not respond within 5s",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 46, in inventory_lookup\n    raise TimeoutError(\"inventory service did not respond within 5s\")\nTimeoutError: inventory service did not respond within 5s\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:23.057142Z",
+            "attributes": {
+                "exception.type": "TimeoutError",
+                "exception.message": "inventory service did not respond within 5s",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 46, in inventory_lookup\n    raise TimeoutError(\"inventory service did not respond within 5s\")\nTimeoutError: inventory service did not respond within 5s\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "inventory_request",
+    "context": {
+        "trace_id": "0x048487f069a6f5727e99f1d21deb3ae2",
+        "span_id": "0xc4d65076893eca4d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T07:17:22.851638Z",
+    "end_time": "2026-06-10T07:17:23.059320Z",
+    "status": {
+        "status_code": "ERROR",
+        "description": "TimeoutError: inventory service did not respond within 5s"
+    },
+    "attributes": {
+        "neatlogs.internal": true,
+        "openinference.span.kind": "WORKFLOW",
+        "neatlogs.span.kind": "workflow",
+        "code.file.path": "Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py",
+        "code.function.name": "handle",
+        "code.line.number": 65,
+        "code.namespace": "__main__",
+        "input.value": "{\"question\": \"Can I order 10 units today?\", \"scenario\": \"timeout\"}",
+        "input.mime_type": "application/json"
+    },
+    "events": [
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:23.058656Z",
+            "attributes": {
+                "exception.type": "TimeoutError",
+                "exception.message": "inventory service did not respond within 5s",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 67, in handle\n    return answer(question, scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 46, in inventory_lookup\n    raise TimeoutError(\"inventory service did not respond within 5s\")\nTimeoutError: inventory service did not respond within 5s\n",
+                "exception.escaped": "False"
+            }
+        },
+        {
+            "name": "exception",
+            "timestamp": "2026-06-10T07:17:23.059310Z",
+            "attributes": {
+                "exception.type": "TimeoutError",
+                "exception.message": "inventory service did not respond within 5s",
+                "exception.stacktrace": "Traceback (most recent call last):\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1177, in start_as_current_span\n    yield span\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 67, in handle\n    return answer(question, scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 54, in answer\n    stock = inventory_lookup(scenario)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/.venv/lib/python3.13/site-packages/neatlogs/decorators/_base.py\", line 294, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/flaky_api_agent.py\", line 46, in inventory_lookup\n    raise TimeoutError(\"inventory service did not respond within 5s\")\nTimeoutError: inventory service did not respond within 5s\n",
+                "exception.escaped": "False"
+            }
+        }
+    ],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "flaky-api-agent",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "flaky-api-agent"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "openai.chat.completions.create",
+    "context": {
+        "trace_id": "0x1a020f2f69150c131faa438a1331ad58",
+        "span_id": "0x34edae9d4c03883d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xed7537a76aac171f",
+    "start_time": "2026-06-10T07:17:56.278011Z",
+    "end_time": "2026-06-10T07:17:57.362579Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "llm",
+        "neatlogs.llm.provider": "openai",
+        "neatlogs.llm.system": "openai",
+        "neatlogs.llm.is_streaming": false,
+        "neatlogs.llm.input_messages.0.role": "user",
+        "neatlogs.llm.input_messages.0.content": "What is the capital of France?",
+        "neatlogs.llm.output_messages.0.role": "assistant",
+        "neatlogs.llm.output_messages.0.content": "The capital of France is Paris.",
+        "neatlogs.llm.finish_reason": "stop",
+        "neatlogs.llm.token_count.prompt": 14,
+        "neatlogs.llm.token_count.completion": 7,
+        "neatlogs.llm.token_count.total": 21,
+        "neatlogs.llm.token_count.cache_read": 0,
+        "neatlogs.llm.token_count.reasoning": 0,
+        "neatlogs.llm.model_name": "gpt-4o-2024-08-06",
+        "neatlogs.llm.metrics.duration_ms": 1084.303
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "my-first-app",
+    "context": {
+        "trace_id": "0x1a020f2f69150c131faa438a1331ad58",
+        "span_id": "0xed7537a76aac171f",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T07:17:56.277980Z",
+    "end_time": "2026-06-10T07:17:57.366579Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "workflow",
+        "neatlogs.auto_root": true
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "openai.chat.completions.create",
+    "context": {
+        "trace_id": "0x4ca73b46462f83eaa9c9e9cfd2b80940",
+        "span_id": "0x3450b18d7809d5a0",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x4bd523e351f76cbc",
+    "start_time": "2026-06-10T07:21:32.647711Z",
+    "end_time": "2026-06-10T07:21:33.816182Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "llm",
+        "neatlogs.llm.provider": "openai",
+        "neatlogs.llm.system": "openai",
+        "neatlogs.llm.is_streaming": false,
+        "neatlogs.llm.input_messages.0.role": "user",
+        "neatlogs.llm.input_messages.0.content": "What is the capital of France?",
+        "neatlogs.llm.output_messages.0.role": "assistant",
+        "neatlogs.llm.output_messages.0.content": "The capital of France is Paris.",
+        "neatlogs.llm.finish_reason": "stop",
+        "neatlogs.llm.token_count.prompt": 14,
+        "neatlogs.llm.token_count.completion": 7,
+        "neatlogs.llm.token_count.total": 21,
+        "neatlogs.llm.token_count.cache_read": 0,
+        "neatlogs.llm.token_count.reasoning": 0,
+        "neatlogs.llm.model_name": "gpt-4o-2024-08-06",
+        "neatlogs.llm.metrics.duration_ms": 1168.29
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "my-first-app",
+    "context": {
+        "trace_id": "0x4ca73b46462f83eaa9c9e9cfd2b80940",
+        "span_id": "0x4bd523e351f76cbc",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T07:21:32.647678Z",
+    "end_time": "2026-06-10T07:21:33.820773Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "workflow",
+        "neatlogs.auto_root": true
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}

@@ -23,6 +23,7 @@ neatlogs.init(
     api_key=os.environ["FLAKY_API_NEATLOGS_API_KEY"],
     workflow_name="flaky-api-agent",
     instrumentations=["openai"],
+    debug=True,
 )
 
 # Import instrumented libraries AFTER init()

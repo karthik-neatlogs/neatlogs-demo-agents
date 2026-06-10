@@ -290,3 +290,417 @@ Status: **completed**
 <summary>Tool use: **ripgrep_raw_search**</summary>
 
 </details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/pyproject.toml</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/main.py</summary>
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2"><details>
+<summary>Tool use: **read_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+Implementing chunked map-reduce summarization.
+
+Tiktoken is unavailable, so I'll approximate tokens at 4 characters per token. Chunks will be 8,000 tokens with 10% overlap. ThreadPoolExecutor will handle parallel processing. I'm starting with a `chunk_document` helper.
+
+The plan adds a `summarize_chunk` step using gpt-4o-mini, a `synthesize_report` step using gpt-4-turbo, and a `summarize_document` orchestrator. I'll also align `APPROX_INPUT_TOKENS` to ~38,000 to match the trace evidence.</details></think>
+
+_**Agent (default)**_
+
+Implementing map-reduce summarization with parallel chunk processing. Checking for env/API keys before running verification.
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search">
+<details>
+<summary>Tool use: **glob_file_search** • Searched codebase "" • **1** result in **1** directory</summary>
+
+Directory: **/Users/karthiknadar/Desktop/neatlogs-demo-agents** (1 file)
+
+| File |
+|------|
+| `agents/.env` |
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="search" data-tool-name="glob_file_search"><details>
+<summary>Tool use: **glob_file_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search">
+<details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+
+Parameters:
+
+```json
+{
+  "caseInsensitive": false,
+  "glob": "*.py",
+  "path": "/Users/karthiknadar/Desktop/neatlogs-demo-agents",
+  "pattern": "@span\\(kind="
+}
+```
+Additional data:
+
+```json
+{
+  "isPruned": true,
+  "outputMode": "content",
+  "path": "/Users/karthiknadar/Desktop/neatlogs-demo-agents",
+  "pattern": "@span\\(kind=",
+  "topFiles": [
+    {
+      "matchCount": 2,
+      "uri": "agents/src/agents/meeting_tasks.py"
+    },
+    {
+      "matchCount": 3,
+      "uri": "agents/src/agents/support_bot.py"
+    },
+    {
+      "matchCount": 2,
+      "uri": "agents/src/agents/moderation_demo.py"
+    },
+    {
+      "matchCount": 2,
+      "uri": "agents/src/agents/data_extractor.py"
+    },
+    {
+      "matchCount": 5,
+      "uri": "agents/src/agents/rag_pinecone.py"
+    },
+    {
+      "matchCount": 3,
+      "uri": "agents/src/agents/flaky_api_agent.py"
+    },
+    {
+      "matchCount": 2,
+      "uri": "agents/src/agents/heavy_report_agent.py"
+    },
+    {
+      "matchCount": 3,
+      "uri": "agents/src/agents/research_agent.py"
+    },
+    {
+      "matchCount": 1,
+      "uri": "agents/src/agents/main.py"
+    }
+  ],
+  "totalFiles": 9,
+  "totalMatches": 23
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="ripgrep_raw_search"><details>
+<summary>Tool use: **ripgrep_raw_search**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+Beginning implementation of the full solution.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/heavy_report_agent.py</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+Running the verification test.</details></think>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
+<details><summary>Tool use: **run_terminal_command_v2** • Run command: cd /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents && poetry run python src/agents/heavy_report_agent.py</summary>
+
+```bash
+cd /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents && poetry run python src/agents/heavy_report_agent.py
+```
+
+```
+Attempting to uninstrument while already uninstrumented
+Summarizing ~38000 input tokens via map-reduce (gpt-4o-mini map, gpt-4-turbo reduce)...
+
+Completed in 19.1s
+
+=== REPORT (truncated) ===
+### Introduction to the Quarterly Operations Review
+
+The Quarterly Operations Review (QOR) serves as a pivotal mechanism for monitoring and strategizing across various operational dimensions within the organization. This report synthesizes the findings and recurring themes from the six sections that discuss the scope and outcomes of the QOR.
+
+### Comprehensive Assessment of Operational Areas
+
+The review consistently covers several critical operational areas, which are vital for the organization's smooth functioning and future growth strategies. These areas include:
+
+- **Supply Chain Status**: The review thoroughly assesses the health and efficiency of the supply chain, ensuring that the organization can meet demand and manage resources effectively.
+
+- **Regional Sales Performance**: Sales data from various regions are analyzed to gauge market penetration and identify growth opportunities or areas requiring attention.
+
+- **Customer Support Volume**: By examining the volume and quality o
+2026-06-06 15:44:58 - neatlogs - INFO - Neatlogs SDK shutdown complete
+
+```
+</details>
+</tool-use>
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints">
+<details>
+<summary>Tool use: **read_lints**</summary>
+
+
+Parameters:
+
+```json
+{
+  "paths": [
+    "/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/heavy_report_agent.py"
+  ]
+}
+```
+Result:
+
+```json
+{
+  "linterErrorsByFile": [
+    {
+      "relativeWorkspacePath": "/Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/heavy_report_agent.py"
+    }
+  ]
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+<tool-use data-tool-type="unknown" data-tool-name="read_lints"><details>
+<summary>Tool use: **read_lints**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The 19.1-second result still exceeds the 10-second target.
+
+The 6-chunk reduction yields only ~3,600 synthesis tokens. That small input size makes the bottleneck likely elsewhere—possibly serial processing, thread pool inefficiency, or the gpt-4-turbo synthesis step itself.
+
+The map phase may take 5–8 seconds per chunk on gpt-4o-mini. The reduce phase with gpt-4-turbo could also exceed 10 seconds. Faster synthesis models, larger chunks, or lower max_tokens could bring the total under the 10-second target.
+
+The 19.1-second result still misses the 10-second target. Parallel map calls should finish in roughly five seconds. The gpt-4-turbo synthesis step likely takes ten to fifteen seconds. Switching synthesis to gpt-4o should bring total latency under the threshold.
+
+Reducing synthesis max_tokens to 2000 is another option. Larger chunks—12,000 tokens—would yield only four chunks, cutting API calls. The gpt-4o model remains the fastest path to meet the latency target.</details></think>
+
+_**Agent (default)**_
+
+19.1s is still above the 10s target — likely the synthesis step. Switching to `gpt-4o` and tuning chunk size.
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/heavy_report_agent.py</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
+<details><summary>Tool use: **run_terminal_command_v2** • Run command: cd /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents && poetry run python src/agents/heavy_report_agent.py</summary>
+
+```bash
+cd /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents && poetry run python src/agents/heavy_report_agent.py
+```
+
+```
+Attempting to uninstrument while already uninstrumented
+Summarizing ~38000 input tokens via map-reduce (gpt-4o-mini map, gpt-4o reduce)...
+
+Completed in 9.1s
+
+=== REPORT (truncated) ===
+## Comprehensive Analysis of the Quarterly Operations Review
+
+---
+
+### Introduction
+
+The Quarterly Operations Review is a critical element of the strategic management framework within the organization. This report synthesizes the purpose, scope, and significance of this review, highlighting its role in operational assessment and strategic planning. Each quarter, this systematic evaluation covers all functional areas across teams and territories, providing a holistic view of the organization's performance and future direction. 
+
+---
+
+### Scope and Components of the Review
+
+The Quarterly Operations Review encompasses several key areas vital to the organization's business performance. These include:
+
+1. **Supply Chain Status**: The review analyses the efficiency and reliability of the supply chain. Understanding the supply chain's current status helps in identifying bottlenecks and potential risk areas, ensuring a seamless flow of goods and services.
+
+2. **Regional Sales Performance**: By
+2026-06-06 15:45:31 - neatlogs - INFO - Neatlogs SDK shutdown complete
+
+```
+</details>
+</tool-use>
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<think><details><summary>Thought Process</summary>
+The fix is working. The operation completed in 9.1 seconds, well under the 10-second threshold.</details></think>
+
+_**Agent (default)**_
+
+Verifying 8,000-token chunks (per the fix spec) still meet the latency target:
+
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents/src/agents/heavy_report_agent.py</summary>
+
+</details>
+
+</tool-use>
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2"><details>
+<summary>Tool use: **edit_file_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2">
+<details><summary>Tool use: **run_terminal_command_v2** • Run command: cd /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents && poetry run python src/agents/heavy_report_agent.py</summary>
+
+```bash
+cd /Users/karthiknadar/Desktop/neatlogs-demo-agents/agents && poetry run python src/agents/heavy_report_agent.py
+```
+
+```
+Attempting to uninstrument while already uninstrumented
+Summarizing ~38000 input tokens via map-reduce (gpt-4o-mini map, gpt-4o reduce)...
+
+Completed in 7.8s
+
+=== REPORT (truncated) ===
+# Quarterly Operations Review Report
+
+## Introduction
+The quarterly operations review is a vital component of our organizational strategy, providing a comprehensive assessment of key business operations and metrics. This report synthesizes several core areas of focus including supply chain status, regional sales performance, customer support volume, product reliability metrics, and the roadmap for upcoming release cycles. The review spans all teams and territories, ensuring that operations are aligned and strategically poised for success. Conducted on a regular basis, this review is vital for maintaining operational efficiency, recognizing areas for improvement, and planning future initiatives effectively.
+
+## Key Areas of Assessment
+
+### Supply Chain Status
+The supply chain is the lifeblood of our operations, ensuring products are delivered promptly and efficiently to all regions. This review critically evaluates the current status of the supply chain, identifying any bottlenecks or i
+2026-06-06 15:45:57 - neatlogs - INFO - Neatlogs SDK shutdown complete
+
+```
+</details>
+</tool-use>
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_command_v2"><details>
+<summary>Tool use: **run_terminal_command_v2**</summary>
+
+</details></tool-use>
+
+_**Agent (default)**_
+
+Implemented chunked map-reduce summarization in `heavy_report_agent.py`. Here is what changed and how it performed.
+
+## Changes
+
+The single-call `summarize_document` flow was replaced with a map-reduce pipeline:
+
+1. **Chunking** — `chunk_document()` splits the input into ~8,000-token segments with 10% overlap to preserve cross-chunk context.
+2. **Map (parallel)** — Each chunk is summarized concurrently via `ThreadPoolExecutor` using `gpt-4o-mini` (`summarize_chunk` spans).
+3. **Reduce** — Intermediate summaries are synthesized into the final report with `gpt-4o` (`synthesize_report` span).
+4. **Input size** — `APPROX_INPUT_TOKENS` was set to `38_000` to match the production trace (~38,224 tokens).
+
+## Verification
+
+| Run | Latency |
+|-----|---------|
+| Original (single `gpt-4-turbo` call, trace `e3398fbd…`) | **21.8s** |
+| Map-reduce (this fix) | **7.8s** |
+
+The synthesized report still covers the expected themes (supply chain, regional sales, customer support, product reliability, release roadmap), so chunking did not drop the main content.
+
+## Neatlogs fix status
+
+The Neatlogs MCP server is not connected in this IDE, so I could not call `triage_update_status`. Please either:
+
+- Connect the Neatlogs MCP server (project API key as Bearer token) and set fix `eab7aa46-cfe3-4421-928b-a332e392041d` to `in_progress` or `resolved`, or  
+- Update the fix manually on the [Neatlogs board](https://app.neatlogs.com/triage?id=eab7aa46-cfe3-4421-928b-a332e392041d).
+
+To re-run locally:
+
+```bash
+cd agents && poetry run python src/agents/heavy_report_agent.py
+```
