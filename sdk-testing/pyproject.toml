@@ -1,0 +1,32 @@
+[project]
+name = "sdk-testing"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "karthik nadar",email = "karthiknadar1204@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "requests (>=2.34.2,<3.0.0)",
+    "neatlogs[openai-agents] (>=1.3.6,<2.0.0)",
+    "langchain-openai (>=1.3.0,<2.0.0)",
+    "crewai (>=1.14.6,<2.0.0)",
+    "openai (>=2.41.1,<3.0.0)",
+    "pydantic-ai (>=0.7.5,<1.0.0)",
+    "dspy (>=2.6.13,<3.0.0)",
+    "agno (>=2.6.13,<3.0.0)",
+    "google-adk (>=1.14.1,<2.0.0)",
+    "strands-agents (>=1.42.0,<2.0.0)",
+    "openai-agents (>=0.17.5,<0.18.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "langgraph (>=1.2.4,<2.0.0)",
+    "openrouter (>=0.9.1,<0.10.0)"
+]
+
+[tool.poetry]
+packages = [{include = "sdk_testing", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
