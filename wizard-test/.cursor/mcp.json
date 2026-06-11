@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "neatlogs": {
+      "type": "http",
+      "url": "https://staging-cloud.neatlogs.com/mcp",
+      "headers": {
+        "Authorization": "Bearer -AmH1gyguJ9_WST8nHuqjVNqS5KNSJdg"
+      }
+    }
+  }
+}

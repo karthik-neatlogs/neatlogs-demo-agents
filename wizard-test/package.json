@@ -1,0 +1,15 @@
+{
+  "name": "wizard-test",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "hono": "^4.12.25",
+    "neatlogs": "^1.0.10",
+    "openai": "^6.42.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
