@@ -1,11 +1,14 @@
 {
   "name": "sdk-testing-ts",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "claude-agent": "bun run src/claude_agent_demo.ts"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0.69",
+    "@anthropic-ai/claude-agent-sdk": "^0.3.173",
     "@anthropic-ai/sdk": "^0.104.1",
+    "@arizeai/openinference-instrumentation-claude-agent-sdk": "^0.2.6",
     "@aws-sdk/client-bedrock-runtime": "^3.1066.0",
     "@google/genai": "^2.8.0",
     "@langchain/openai": "^1.4.7",
@@ -16,9 +19,11 @@
     "@openrouter/agent": "^0.7.1",
     "@strands-agents/sdk": "^1.4.0",
     "ai": "^6.0.201",
+    "dotenv": "^17.4.2",
     "hono": "^4.12.25",
     "neatlogs": "^1.0.10",
-    "openai": "^6.42.0"
+    "openai": "^6.42.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/bun": "latest"
