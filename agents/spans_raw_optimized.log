@@ -1613,3 +1613,315 @@
         "schema_url": ""
     }
 }
+{
+    "name": "openai.chat.completions.create",
+    "context": {
+        "trace_id": "0x034ec70b7fbd2f4ee7ba2eac6e404627",
+        "span_id": "0xb2fd267076dfea2e",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x35cf57123acd3ed2",
+    "start_time": "2026-06-10T15:15:16.568337Z",
+    "end_time": "2026-06-10T15:15:18.052299Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "llm",
+        "neatlogs.llm.provider": "openai",
+        "neatlogs.llm.system": "openai",
+        "neatlogs.llm.is_streaming": false,
+        "neatlogs.llm.input_messages.0.role": "user",
+        "neatlogs.llm.input_messages.0.content": "What is the capital of France?",
+        "neatlogs.llm.output_messages.0.role": "assistant",
+        "neatlogs.llm.output_messages.0.content": "The capital of France is Paris.",
+        "neatlogs.llm.finish_reason": "stop",
+        "neatlogs.llm.token_count.prompt": 14,
+        "neatlogs.llm.token_count.completion": 7,
+        "neatlogs.llm.token_count.total": 21,
+        "neatlogs.llm.token_count.cache_read": 0,
+        "neatlogs.llm.token_count.reasoning": 0,
+        "neatlogs.llm.model_name": "gpt-4o-2024-08-06",
+        "neatlogs.llm.metrics.duration_ms": 1483.797
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "my-first-app",
+    "context": {
+        "trace_id": "0x034ec70b7fbd2f4ee7ba2eac6e404627",
+        "span_id": "0x35cf57123acd3ed2",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T15:15:16.568306Z",
+    "end_time": "2026-06-10T15:15:18.053969Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "workflow",
+        "neatlogs.auto_root": true
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "openai.chat.completions.create",
+    "context": {
+        "trace_id": "0xf4b3dbdbeeb3f32211756fbf3add02cd",
+        "span_id": "0x35440bf601435bfa",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0xa5ce05ec2ef7ea9c",
+    "start_time": "2026-06-10T15:15:42.023251Z",
+    "end_time": "2026-06-10T15:15:42.990886Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "llm",
+        "neatlogs.llm.provider": "openai",
+        "neatlogs.llm.system": "openai",
+        "neatlogs.llm.is_streaming": false,
+        "neatlogs.llm.input_messages.0.role": "user",
+        "neatlogs.llm.input_messages.0.content": "What is the capital of France?",
+        "neatlogs.llm.output_messages.0.role": "assistant",
+        "neatlogs.llm.output_messages.0.content": "The capital of France is Paris.",
+        "neatlogs.llm.finish_reason": "stop",
+        "neatlogs.llm.token_count.prompt": 14,
+        "neatlogs.llm.token_count.completion": 7,
+        "neatlogs.llm.token_count.total": 21,
+        "neatlogs.llm.token_count.cache_read": 0,
+        "neatlogs.llm.token_count.reasoning": 0,
+        "neatlogs.llm.model_name": "gpt-4o-2024-08-06",
+        "neatlogs.llm.metrics.duration_ms": 967.37
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "my-first-app",
+    "context": {
+        "trace_id": "0xf4b3dbdbeeb3f32211756fbf3add02cd",
+        "span_id": "0xa5ce05ec2ef7ea9c",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T15:15:42.023215Z",
+    "end_time": "2026-06-10T15:15:42.995199Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "workflow",
+        "neatlogs.auto_root": true
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "openai.chat.completions.create",
+    "context": {
+        "trace_id": "0x80cfb2ba625f3f4f9249ee56e9fe1ad1",
+        "span_id": "0xc29727a6340e24dc",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x070c10aeb9ddfd77",
+    "start_time": "2026-06-10T15:15:48.480580Z",
+    "end_time": "2026-06-10T15:15:49.228029Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "llm",
+        "neatlogs.llm.provider": "openai",
+        "neatlogs.llm.system": "openai",
+        "neatlogs.llm.is_streaming": false,
+        "neatlogs.llm.input_messages.0.role": "user",
+        "neatlogs.llm.input_messages.0.content": "What is the capital of France?",
+        "neatlogs.llm.output_messages.0.role": "assistant",
+        "neatlogs.llm.output_messages.0.content": "The capital of France is Paris.",
+        "neatlogs.llm.finish_reason": "stop",
+        "neatlogs.llm.token_count.prompt": 14,
+        "neatlogs.llm.token_count.completion": 7,
+        "neatlogs.llm.token_count.total": 21,
+        "neatlogs.llm.token_count.cache_read": 0,
+        "neatlogs.llm.token_count.reasoning": 0,
+        "neatlogs.llm.model_name": "gpt-4o-2024-08-06",
+        "neatlogs.llm.metrics.duration_ms": 747.195
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "my-first-app",
+    "context": {
+        "trace_id": "0x80cfb2ba625f3f4f9249ee56e9fe1ad1",
+        "span_id": "0x070c10aeb9ddfd77",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T15:15:48.480549Z",
+    "end_time": "2026-06-10T15:15:49.232549Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "workflow",
+        "neatlogs.auto_root": true
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "openai.chat.completions.create",
+    "context": {
+        "trace_id": "0xb4b1d5d26fba84076aae61e507398853",
+        "span_id": "0xe0c7b4cb1fe89990",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": "0x65f2857a22877ee8",
+    "start_time": "2026-06-10T23:55:28.217330Z",
+    "end_time": "2026-06-10T23:55:28.891411Z",
+    "status": {
+        "status_code": "OK"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "llm",
+        "neatlogs.llm.provider": "openai",
+        "neatlogs.llm.system": "openai",
+        "neatlogs.llm.is_streaming": false,
+        "neatlogs.llm.input_messages.0.role": "user",
+        "neatlogs.llm.input_messages.0.content": "What is the capital of France?",
+        "neatlogs.llm.output_messages.0.role": "assistant",
+        "neatlogs.llm.output_messages.0.content": "The capital of France is Paris.",
+        "neatlogs.llm.finish_reason": "stop",
+        "neatlogs.llm.token_count.prompt": 14,
+        "neatlogs.llm.token_count.completion": 7,
+        "neatlogs.llm.token_count.total": 21,
+        "neatlogs.llm.token_count.cache_read": 0,
+        "neatlogs.llm.token_count.reasoning": 0,
+        "neatlogs.llm.model_name": "gpt-4o-2024-08-06",
+        "neatlogs.llm.metrics.duration_ms": 673.257
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "my-first-app",
+    "context": {
+        "trace_id": "0xb4b1d5d26fba84076aae61e507398853",
+        "span_id": "0x65f2857a22877ee8",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.INTERNAL",
+    "parent_id": null,
+    "start_time": "2026-06-10T23:55:28.217295Z",
+    "end_time": "2026-06-10T23:55:28.893853Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "neatlogs.span.kind": "workflow",
+        "neatlogs.auto_root": true
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "telemetry.sdk.language": "python",
+            "telemetry.sdk.name": "opentelemetry",
+            "telemetry.sdk.version": "1.42.1",
+            "service.name": "my-first-app",
+            "service.version": "1.3.6",
+            "neatlogs.workflow_name": "my-first-app"
+        },
+        "schema_url": ""
+    }
+}
