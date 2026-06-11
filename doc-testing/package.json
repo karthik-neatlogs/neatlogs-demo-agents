@@ -3,10 +3,13 @@
   "scripts": {
     "dev": "bun run --hot src/index.ts",
     "sdk:ai": "bun run src/sdk_ai.ts",
+    "sdk:openai-simple": "bun run src/sdk_openai_simple.ts",
     "sdk:mastra": "bun run src/sdk_mastra.ts",
     "sdk:pi-agent": "bun run src/sdk_pi_agent.ts",
     "sdk:openai-agents": "bun run src/sdk_openai_agents.ts",
+    "sdk:openai-agents-simple": "bun run src/sdk_openai_agents_simple.ts",
     "sdk:strands": "bun run src/sdk_strands.ts",
+    "sdk:strands-simple": "bun run src/sdk_strands_simple.ts",
     "sdk:openrouter": "bun run src/sdk_openrouter.ts"
   },
   "dependencies": {
