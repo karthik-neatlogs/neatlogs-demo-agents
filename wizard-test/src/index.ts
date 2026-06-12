@@ -3,6 +3,7 @@ import { init, span, trace, flush, shutdown, PromptTemplate, UserPromptTemplate 
 
 await init({
   apiKey: process.env.NEATLOGS_API_KEY ?? "",
+    endpoint: process.env.NEATLOGS_ENDPOINT,
   workflowName: "wizard-test",
   instrumentations: ["openai"],
 });

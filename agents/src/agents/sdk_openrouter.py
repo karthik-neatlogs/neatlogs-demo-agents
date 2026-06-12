@@ -7,7 +7,7 @@ from openrouter import OpenRouter
 
 load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
-neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], workflow_name="openrouter-demo")
+neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], endpoint=os.environ.get("NEATLOGS_ENDPOINT", "http://localhost:4100"), workflow_name="openrouter-demo")
 
 client = neatlogs.wrap(OpenRouter(api_key=os.environ["OPENROUTER_API_KEY"]))
 

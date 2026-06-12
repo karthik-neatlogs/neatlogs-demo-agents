@@ -7,6 +7,7 @@ import { openai } from "@ai-sdk/openai";
 async function main() {
   await init({
     apiKey: process.env.NEATLOGS_API_KEY,
+    endpoint: process.env.NEATLOGS_ENDPOINT,
     workflowName: "ai-sdk-demo",
   });
 

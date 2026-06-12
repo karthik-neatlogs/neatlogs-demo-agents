@@ -5,6 +5,7 @@ import { Agent, run, addTraceProcessor } from "@openai/agents";
 async function main() {
   await init({
     apiKey: process.env.NEATLOGS_API_KEY,
+    endpoint: process.env.NEATLOGS_ENDPOINT,
     workflowName: "openai-agents-demo",
   });
 

@@ -8,6 +8,7 @@ load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 neatlogs.init(
     api_key=os.environ["NEATLOGS_API_KEY"],
+    endpoint=os.environ.get("NEATLOGS_ENDPOINT", "http://localhost:4100"),
     workflow_name="langchain-demo",
     instrumentations=["langchain"],
 )

@@ -6,6 +6,7 @@ import { OpenAIModel } from "@strands-agents/sdk/models/openai";
 async function main() {
   await init({
     apiKey: process.env.NEATLOGS_API_KEY,
+    endpoint: process.env.NEATLOGS_ENDPOINT,
     workflowName: "strands-demo",
   });
 

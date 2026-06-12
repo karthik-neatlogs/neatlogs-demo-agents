@@ -6,7 +6,7 @@ from openai import OpenAI
 
 load_dotenv()
 
-neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], workflow_name="openai-demo")
+neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], endpoint=os.environ.get("NEATLOGS_ENDPOINT", "http://localhost:4100"), workflow_name="openai-demo")
 
 client = neatlogs.wrap(OpenAI())
 

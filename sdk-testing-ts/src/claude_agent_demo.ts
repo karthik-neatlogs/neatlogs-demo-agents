@@ -9,6 +9,7 @@ config({ path: resolve(import.meta.dir, "../../sdk-testing/.env") });
 async function main() {
   await init({
     apiKey: process.env.NEATLOGS_API_KEY,
+    endpoint: process.env.NEATLOGS_ENDPOINT,
     workflowName: "claude-agent-demo",
   });
 

@@ -1,4 +1,5 @@
 import asyncio
+import logging
 import os
 from pathlib import Path
 
@@ -9,6 +10,10 @@ from google.adk.sessions import InMemorySessionService
 from google.genai import types
 import neatlogs
 
+from gemini_rate_limit import run_async_with_rate_limit_and_retry
+
+logging.basicConfig(level=logging.INFO)
+
 load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 if not os.environ.get("GOOGLE_API_KEY") and os.environ.get("GEMINI_API_KEY"):
@@ -17,7 +22,7 @@ if not os.environ.get("GOOGLE_API_KEY") and os.environ.get("GEMINI_API_KEY"):
 APP_NAME = "google-adk-demo"
 USER_ID = "demo-user"
 
-neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], workflow_name="google-adk-demo")
+neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], endpoint=os.environ.get("NEATLOGS_ENDPOINT", "http://localhost:4100"), workflow_name="google-adk-demo")
 
 agent = LlmAgent(
     name="assistant",
@@ -38,7 +43,8 @@ async def main() -> None:
         parts=[types.Part(text="In one sentence, what is Google ADK?")],
     )
 
-    async for event in runner.run_async(
+    async for event in run_async_with_rate_limit_and_retry(
+        runner,
         user_id=USER_ID,
         session_id=session.id,
         new_message=content,

@@ -13,7 +13,7 @@ import neatlogs
 
 load_dotenv()
 
-neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], workflow_name="dspy-demo")
+neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], endpoint=os.environ.get("NEATLOGS_ENDPOINT", "http://localhost:4100"), workflow_name="dspy-demo")
 
 dspy.configure(lm=dspy.LM("openai/gpt-4o"))
 

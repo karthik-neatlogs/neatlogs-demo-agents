@@ -7,7 +7,7 @@ from strands.models.openai import OpenAIModel
 
 load_dotenv()
 
-neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], workflow_name="strands-demo")
+neatlogs.init(api_key=os.environ["NEATLOGS_API_KEY"], endpoint=os.environ.get("NEATLOGS_ENDPOINT", "http://localhost:4100"), workflow_name="strands-demo")
 
 agent = Agent(
     model=OpenAIModel(
