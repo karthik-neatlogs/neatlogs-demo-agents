@@ -1,6 +1,7 @@
-# Hermes is not in pyproject.toml — it pins requests==2.33.0, which conflicts
-# with this project. Install ad-hoc in a separate venv when needed:
+# Hermes is not in pyproject.toml — install ad-hoc when needed:
 #   poetry run pip install "git+https://github.com/NousResearch/hermes-agent.git"
+#
+# Hermes defaults to OpenRouter; set OPENROUTER_API_KEY in agents/.env.
 
 import os
 from pathlib import Path
@@ -23,7 +24,7 @@ agent = neatlogs.wrap(AIAgent(model="openai/gpt-4o-mini", max_iterations=4))
 result = agent.run_conversation(
     "Explain distributed tracing in one paragraph."
 )
-print(result)
+print(result.get("final_response", result) if isinstance(result, dict) else result)
 
 neatlogs.flush()
 neatlogs.shutdown()
