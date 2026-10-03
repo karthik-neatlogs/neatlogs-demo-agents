@@ -15,6 +15,7 @@ Add FLAKY_API_NEATLOGS_API_KEY to .env before running.
 import neatlogs
 import os
 import time
+import random
 from dotenv import load_dotenv
 load_dotenv()
 from neatlogs import span
@@ -32,7 +33,36 @@ from openai import OpenAI
 client = OpenAI()
 
 
+def retry_with_backoff(retries=3, initial_delay=1.0, backoff_factor=2.0):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            delay = initial_delay
+            for attempt in range(retries + 1):
+                try:
+                    return func(*args, **kwargs)
+                except (RuntimeError, TimeoutError) as e:
+                    err_str = str(e)
+                    is_retryable = (
+                        "429" in err_str or 
+                        "rate_limit_error" in err_str or
+                        "500" in err_str or 
+                        "TimeoutError" in err_str or
+                        "respond within" in err_str
+                    )
+                    if not is_retryable or attempt == retries:
+                        raise e
+                    
+                    # Exponential backoff with random jitter
+                    jitter = random.uniform(0.5, 1.5)
+                    sleep_time = delay * jitter
+                    time.sleep(sleep_time)
+                    delay *= backoff_factor
+        return wrapper
+    return decorator
+
+
 @span(kind="TOOL", name="inventory.lookup", tool_name="inventory.lookup")
+@retry_with_backoff(retries=3, initial_delay=0.5, backoff_factor=2.0)
 def inventory_lookup(scenario):
     # Mock downstream inventory call — raises directly on each failure scenario.
     time.sleep(0.2)
@@ -41,7 +71,9 @@ def inventory_lookup(scenario):
             "rate_limit_error (HTTP 429): quota exceeded - request was throttled"
         )
     if scenario == "server_error":
-        raise RuntimeError("HTTP 500: internal server error from inventory service")
+        raise RuntimeError(
+            "HTTP 500: internal server error from inventory service"
+        )
     if scenario == "timeout":
         raise TimeoutError("inventory service did not respond within 5s")
     return {"in_stock": 42}
